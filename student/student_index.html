@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+     background: linear-gradient(to right, #EED3D9, #E5D9F2);
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #003147;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .dashboard-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px; /* gap between cards */
+    }
+
+    .card {
+      background-color: #C2DED1;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(247, 149, 2, 0.2);
+      padding: 20px;
+      width: 260px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+            background-color: #E6B2BA;
+            transform: translateY(-5px);
+        }
+
+    .card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+     box-shadow: 0 0 20px rgba(1, 11, 17, 0.9);
+      cursor: pointer;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #004d40;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-    <center>Student Dashboard</center>
-    <center>
-    <table border = "1" >
-        <tr>
-            <td><img src="student_media\course.jpg" alt="course" height="120" width="120"></td>
-            <td><img src="student_media\profile.jpg" alt="profile" height="120" width="120"></td>
-            <td><img src="student_media\results.jpg" alt="post marks" height="120" width="120"></td>
-        </tr>
-        <tr>
-            <td><img src="student_media\reports.jpg" alt="reports" height="120" width="120"></td>
-        </tr>
-    </table>
-    </center>
-    
+
+  <h1>Student Dashboard</h1>
+
+  <div class="dashboard-container">
+    <div class="card">
+      <a href="view_course.html">
+        <img src="student_media/course.jpg" alt="Courses">
+      </a>
+      <p>Courses</p>
+    </div>
+
+    <div class="card">
+      <a href="profile.html">
+        <img src="student_media/profile.jpg" alt="Student Profile">
+      </a>
+      <p>Student Profile</p>
+    </div>
+
+    <div class="card">
+      <a href="view_results.html">
+        <img src="student_media/results.jpg" alt="Student Results">
+      </a>
+      <p>Student Results</p>
+    </div>
+
+    <div class="card">
+      <a href="view_reports.html">
+        <img src="student_media/reports.jpg" alt="Student Reports">
+      </a>
+      <p>Student Reports</p>
+    </div>
+  </div>
+
 </body>
 </html>

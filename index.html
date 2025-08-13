@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #EED3D9, #E5D9F2);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #002f4b;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Gap between cards */
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #C2DED1;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(247, 149, 2, 0.2);
+            padding: 20px;
+            width: 250px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: #E6B2BA;
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(1, 11, 17, 0.9);
+        }
+
+        .card p {
+            font-size: 20px;
+            color: #004d40;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Result Analysis Dashboard</h1>
+    <div class="card-container">
+        <div class="card">
+            <a href="Admin/admin_index.html">
+                <img src="../public_media/admin logo.jpg" alt="Admin Image">
+            </a>
+            <p>Admin</p>
+        </div>
+
+        <div class="card">
+            <a href="faculty/faculty_index.html">
+                <img src="../public_media/faculty.jpg" alt="Faculty Image">
+            </a>
+            <p>Faculty</p>
+        </div>
+
+        <div class="card">
+            <a href="student/student_index.html">
+                <img src="../public_media/stdent.jpg" alt="Student Image">
+            </a>
+            <p>Student</p>
+        </div>
+    </div>
+</body>
+</html>

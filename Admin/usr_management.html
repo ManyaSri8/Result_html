@@ -1,11 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #f089ab, #C3AED6);
+      font-size: 18px;
+      color: #333;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 15px;
+      width: 400px;
+      max-width: 90%;
+      margin: 30px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease;
+    }
+
+    .container:hover {
+      background-color: #fff0f5;
+      transform: scale(1.015);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #5A189A;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #4A4A4A;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input[type="button"] {
+      background-color: #6A4C93;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+      background-color: #B5179E;
+    }
+
+    table {
+      width: 95%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: #F8F9FA;
+      font-size: 17px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #5A189A;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F1E5F2;
+    }
+
+    /* Edit Button */
+    .edit-button {
+      padding: 8px 14px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .edit-button:hover {
+      background-color: #dc3545;
+    }
+
+    /* Delete Button */
+    .delete-button {
+      padding: 8px 14px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-button:hover {
+      background-color: #28a745;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <div class="container">
+    <h2>User Registration</h2>
+    <form>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select name="role" id="role">
+          <option value="Student">Student</option>
+          <option value="Admin">Admin</option>
+          <option value="User">User</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <input type="button" value="Report User" />
+    </form>
+  </div>
+
+  <table>
+    <tr>
+      <th>S.No</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th colspan="2">Actions</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Manya Sri</td>
+      <td>manyasri@gmail.com</td>
+      <td>Admin</td>
+      <td><button class="edit-button">Edit</button></td>
+      <td><button class="delete-button">Delete</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Mouni</td>
+      <td>mouni@gmail.com</td>
+      <td>User</td>
+      <td><button class="edit-button">Edit</button></td>
+      <td><button class="delete-button">Delete</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Sujitha</td>
+      <td>sujitha@gmail.com</td>
+      <td>Admin</td>
+      <td><button class="edit-button">Edit</button></td>
+      <td><button class="delete-button">Delete</button></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Ram</td>
+      <td>ram@gmail.com</td>
+      <td>User</td>
+      <td><button class="edit-button">Edit</button></td>
+      <td><button class="delete-button">Delete</button></td>
+    </tr>
+  </table>
+
 </body>
 </html>
